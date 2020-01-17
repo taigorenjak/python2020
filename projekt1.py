@@ -1,20 +1,19 @@
-shopping_basket = ()  #this is an empty dictionary                                                                                                                                                                                                                              (key:volume)e.g ("apples" : 5, "bananas"             
+shopping_basket = {}  #this is an empty dictionary                                                                                                                                                                                                                              (key:volume)e.g ("apples" : 5, "bananas"             
                       #(key:value) e.g ("apples" : 5, "bananas" : 3)
 print("""
  shopping bask________________________
-
 1: add item
 2: remove ite3: view basket
 0: exit program
-
 """)
-
-option = int(input("enter an option: "))       
+option = 1    
 while option !=0:
+    print(shopping_basket)
+    option = int(input("enter an option: "))
     if option == 1:
-        item =input("enter an item: ")
+        item = input("enter an item: ")
         qnty = int(input("enter the quantity: "))
-        shopping_basket[item] = qnty
+        shopping_basket.update({item: qnty})
         
     elif option == 2:
         item = input("enter an item: ")
